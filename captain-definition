@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "dockerfileLines": [
+    "FROM node:22.12.0",
+    "RUN mkdir -p /usr/src/app",
+    "WORKDIR /usr/src/app",
+    "COPY ./package.json /usr/src/app/",
+    "RUN npm install --legacy-peer-deps && npm cache clean --force",
+    "COPY ./ /usr/src/app",
+    "ENV NODE_ENV production",
+    "ENV PORT 80",
+    "EXPOSE 80",
+    "ARG NEXT_PUBLIC_BETTER_AUTH_URL",
+    "ARG BETTER_AUTH_SECRET",
+    "ARG DATABASE_URL",
+    "ARG MICROSOFT_CLIENT_ID",
+    "ARG MICROSOFT_CLIENT_SECRET",
+    "ARG MICROSOFT_TENANT_ID",
+    "ARG MICROSOFT_REDIRECT_URI",
+    "ARG BLOB_READ_WRITE_TOKEN",
+    "ENV NEXT_PUBLIC_BETTER_AUTH_URL=$NEXT_PUBLIC_BETTER_AUTH_URL",
+    "ENV BETTER_AUTH_SECRET=$BETTER_AUTH_SECRET",
+    "ENV DATABASE_URL=$DATABASE_URL",
+    "ENV MICROSOFT_CLIENT_ID=$MICROSOFT_CLIENT_ID",
+    "ENV MICROSOFT_CLIENT_SECRET=$MICROSOFT_CLIENT_SECRET",
+    "ENV MICROSOFT_TENANT_ID=$MICROSOFT_TENANT_ID",
+    "ENV MICROSOFT_REDIRECT_URI=$MICROSOFT_REDIRECT_URI",
+    "ENV BLOB_READ_WRITE_TOKEN=$BLOB_READ_WRITE_TOKEN",
+    "RUN npm run build",
+    "CMD [ \"npm\", \"start\" ]"
+  ]
+}

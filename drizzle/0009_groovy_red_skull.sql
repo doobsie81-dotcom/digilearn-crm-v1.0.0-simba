@@ -1,0 +1,2 @@
+ALTER TABLE `leads` MODIFY COLUMN `created_at` datetime DEFAULT '2025-10-02 07:11:18.373';--> statement-breakpoint
+ALTER TABLE `leads` MODIFY COLUMN `upated_at` datetime DEFAULT '2025-10-02 07:11:18.373';

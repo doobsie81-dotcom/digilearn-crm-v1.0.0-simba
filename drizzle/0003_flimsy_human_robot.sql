@@ -1,0 +1,1 @@
+ALTER TABLE `user` ADD `role` varchar(255) DEFAULT 'agent' NOT NULL;

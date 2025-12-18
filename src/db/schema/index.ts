@@ -1,0 +1,21 @@
+export * from "./auth-schema";
+export * from "./settings-schema";
+export * from "./events-schema";
+export * from "./lead-qualification-schema";
+export * from "./leads-schema";
+export * from "./deals-schema";
+export * from "./pipelines-schema";
+export * from "./sla-violations-schema";
+export * from "./products-schema";
+export * from "./accounting-schema";
+export * from "./tasks-schema";
+export * from "./notes-schema";
+export * from "./emails-schema";
+export * from "./permissions-schema";
+export * from "./tags-schema";
+export * from "./calls-schema";
+export * from "./files-schema";
+export * from "./raffle-schema";
+export * from "./payment-terms-schema";
+// Re-export with consistent naming
+export { SettingSchema as settings } from "./settings-schema";

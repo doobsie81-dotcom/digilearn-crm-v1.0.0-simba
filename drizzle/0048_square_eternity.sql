@@ -1,0 +1,3 @@
+ALTER TABLE `companies` MODIFY COLUMN `province` enum('Harare','Bulawayo','Masvingo','Midlands','Manicaland','Mashonaland East','Mashonaland Central','Mashonaland West','Matebeleland South','Matebeleland North');--> statement-breakpoint
+ALTER TABLE `leads` MODIFY COLUMN `created_at` datetime DEFAULT '2025-10-24 10:03:36.670';--> statement-breakpoint
+ALTER TABLE `leads` MODIFY COLUMN `updated_at` datetime DEFAULT '2025-10-24 10:03:36.670';

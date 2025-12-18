@@ -1,0 +1,1 @@
+export const SUPPORTED_JOB_TITLES = ['Headmaster', 'Headmistress', 'Bursar', 'Teacher', 'Senior Teacher', 'Accountant', 'SDA Member'] as const;
